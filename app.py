@@ -145,6 +145,8 @@ def init_openai_client():
             azure_ad_token_provider=ad_token_provider,
             default_headers=default_headers,
             azure_endpoint=endpoint,
+            # Override the SSL verification to false, so it's easier to debug without the need to handle cert
+            http_client=httpx.AsyncClient(verify=False),
         )
 
         return azure_openai_client

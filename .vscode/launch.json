@@ -10,7 +10,7 @@
       "env": {
           "QUART_APP": "app:app",
           "QUART_ENV": "development",
-          "QUART_DEBUG": "0"
+          "QUART_DEBUG": "1"
       },
       "args": [
           "run",
